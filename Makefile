@@ -3,4 +3,7 @@ CFLAGS=-Wall -g
 all: ex1 ex3 ex4 ex5 ex6 ex7 ex8 ex9
 
 clean:
-	rm -rf ex[1-9] *.dSYM
+	find . -depth 1 \
+		\( -type f -name "ex*" \! -name "ex*.c" \) -or \
+		\( -type d -name "*.dSYM" \) \
+		| xargs rm -r
