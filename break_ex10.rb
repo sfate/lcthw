@@ -1,0 +1,1 @@
+system('./ex10', *Array.new(10000, 'blah'))
